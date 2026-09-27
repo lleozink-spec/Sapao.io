@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>Sapao.io — O sapo mais faminto da lagoa</title>
+  <meta name="description" content="Sapao.io — jogo arcade de arena com um sapo, comida e power-ups.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg-glow glow-a"></div><div class="bg-glow glow-b"></div>
+  <header class="topbar">
+    <div class="brand"><span class="brand-frog">🐸</span><span>SAPAO<span>.io</span></span></div>
+    <div class="top-stats">
+      <div><small>PONTOS</small><b id="scoreTop">0</b></div>
+      <div><small>RECORDE</small><b id="bestTop">0</b></div>
+    </div>
+    <button class="sound" id="soundBtn" aria-label="Som">🔊</button>
+  </header>
+
+  <main>
+    <section id="home" class="screen">
+      <div class="hero">
+        <div class="eyebrow">🪷 BEM-VINDO À LAGOA</div>
+        <h1>SAPAO<span>.io</span></h1>
+        <p>Coma, cresça e domine a lagoa. Quanto maior o sapo, maior a confusão.</p>
+        <button id="playBtn" class="primary">JOGAR AGORA <span>→</span></button>
+        <div class="tips">
+          <div><b>⌨️</b><span>WASD / SETAS<br><small>mova o sapo</small></span></div>
+          <div><b>📱</b><span>TOQUE<br><small>use os controles</small></span></div>
+          <div><b>⚡</b><span>POWER-UPS<br><small>fique mais forte</small></span></div>
+        </div>
+      </div>
+      <div class="frog-showcase"><div class="lilypad"></div><div class="frog-big">🐸</div><div class="bubble b1"></div><div class="bubble b2"></div></div>
+    </section>
+
+    <section id="game" class="screen hidden">
+      <div class="game-head">
+        <div><small>PONTOS</small><strong id="score">0</strong></div>
+        <div class="meter"><span id="sizeMeter"></span></div>
+        <div><small>TAMANHO</small><strong id="sizeLabel">1</strong></div>
+      </div>
+      <div class="arena-wrap">
+        <canvas id="arena"></canvas>
+        <div id="toast" class="toast"></div>
+      </div>
+      <div class="mobile-controls">
+        <button data-dir="up">▲</button>
+        <div><button data-dir="left">◀</button><button data-dir="down">▼</button><button data-dir="right">▶</button></div>
+      </div>
+      <button id="quitBtn" class="ghost">SAIR DA LAGOA</button>
+    </section>
+
+    <section id="gameover" class="screen hidden">
+      <div class="gameover-card">
+        <div class="frog-face">🐸</div>
+        <div class="eyebrow">FIM DE JOGO</div>
+        <h2>O sapão tomou um caldo!</h2>
+        <div class="final-score"><small>PONTUAÇÃO</small><b id="finalScore">0</b></div>
+        <div id="newBest" class="new-best hidden">🏆 NOVO RECORDE!</div>
+        <button id="againBtn" class="primary">JOGAR DE NOVO →</button>
+        <button id="menuBtn" class="ghost">VOLTAR AO MENU</button>
+      </div>
+    </section>
+  </main>
+  <footer>© 2026 SAPAO.IO · FEITO COM HTML, CSS & JAVASCRIPT</footer>
+  <script src="script.js"></script>
+</body>
+</html>
